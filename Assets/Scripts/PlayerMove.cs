@@ -30,4 +30,20 @@ public class PlayerMove : MonoBehaviour{
         animator.SetFloat("VelX", x);
         animator.SetFloat("VelY", y);
     }
+
+    public int getVida(){
+        return this.vida;
+    }
+
+    public void setVida(int vida){
+        this.vida = vida;
+    }
+
+    public int getPuntos(){
+        return this.puntos;
+    }
+
+    public void setPuntos(int puntos){
+        this.puntos = puntos;
+    }
 }
