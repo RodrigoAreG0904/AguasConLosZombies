@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: a4bcc5817025f0348b6f2b044af5f759
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266249
+  packageName: Low Poly PBR Houses Exteriors Pack
+  packageVersion: 1.0
+  assetPath: Assets/kassya_abyan/cottages (free)/meshes/cottage_2.fbx
+  uploadId: 626757
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -21,8 +28,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -42,7 +47,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
@@ -112,10 +117,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 266249
-  packageName: Low Poly PBR Houses Exteriors Pack
-  packageVersion: 1.0
-  assetPath: Assets/kassya_abyan/cottages (free)/meshes/cottage_2.fbx
-  uploadId: 626757
