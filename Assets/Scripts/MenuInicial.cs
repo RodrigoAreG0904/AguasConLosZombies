@@ -5,13 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour{
 
-    // Start is called before the first frame update
+    public GameObject playButton;
+    public GameObject confButton;
+    public GameObject confScreen;
+
     public void Jugar(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(2);
+    }
+
+    public void Tutorial(){
+        SceneManager.LoadScene(1);
     }
 
     public void Salir(){
         Debug.Log("Salir");
         Application.Quit();
+    }
+
+    public void Config(){
+        playButton.SetActive(false);
+        confButton.SetActive(false);
+        confScreen.SetActive(true);
     }
 }
