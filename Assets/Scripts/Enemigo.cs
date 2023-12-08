@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemigo : MonoBehaviour{
 
@@ -9,6 +10,9 @@ public class Enemigo : MonoBehaviour{
     public Animator ani;
     public Quaternion angulo;
     public float grado;
+    public Image barraDeVida;
+
+    public int vidaMax;
 
     public GameObject target;
     public bool atacando;
@@ -117,6 +121,7 @@ public class Enemigo : MonoBehaviour{
         CambiarARojo();
         vida = vida - damage;
         siendoAtacado = true;
+        barraDeVida.fillAmount = (float)vida/(float)vidaMax;
         int puntosJugador = player.GetComponent<PlayerMove>().getPuntos();
         puntosJugador = puntosJugador + this.puntos;
         player.GetComponent<PlayerMove>().setPuntos(puntosJugador);
