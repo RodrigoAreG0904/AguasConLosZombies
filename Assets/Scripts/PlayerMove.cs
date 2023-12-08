@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour{
+
+    public Image barraDeVida;
 
     public float runSpeed = 7;
     public float rotationSpeed = 250;
@@ -10,6 +13,8 @@ public class PlayerMove : MonoBehaviour{
     public Animator animator;
 
     private float x, y;
+
+    public int vidaMax;
 
     [Header("Info")]
     public int vida;
@@ -29,6 +34,10 @@ public class PlayerMove : MonoBehaviour{
 
         animator.SetFloat("VelX", x);
         animator.SetFloat("VelY", y);
+
+
+        barraDeVida.fillAmount = (float)vida / (float)vidaMax;
+        
     }
 
     public int getVida(){
