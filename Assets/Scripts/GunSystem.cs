@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using TMPro;
 
 public class GunSystem : MonoBehaviour{
@@ -26,16 +27,27 @@ public class GunSystem : MonoBehaviour{
     // public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI magazineText;
     public TextMeshProUGUI pointsText;
+    
+    [Header("Sonidos")]
+    [Range(0,1f)]
+    public float Volume = 1f;
+    public AudioClip ShootingClip;
+    public AudioClip EmptyClip;
+    public AudioClip ReloadClip;
+    
 
     [Header("Sistema de apuntado")]
     public GameObject mainCamera;
     public GameObject aimCamera;
     public int manager;
 
+    private AudioSource audioSource;
+
     private void Awake(){
         player = GameObject.FindGameObjectWithTag("Player");
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update(){
         MyInput();
@@ -62,6 +74,10 @@ public class GunSystem : MonoBehaviour{
             bulletsShot = bulletsPerTap;
             Shoot();
         }
+
+        if(readyToShoot && shooting && !reloading && bulletsLeft == 0){
+            PlayOutOfAmmoClip();
+        }
     }
     private void Shoot(){
         readyToShoot = false;
@@ -73,22 +89,18 @@ public class GunSystem : MonoBehaviour{
         //Calculate Direction with Spread
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
 
+        PLayShootingClip();
+
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy)){
             Debug.Log("Le diste al:" + rayHit.collider.name);
 
             if (rayHit.collider.CompareTag("Enemy")){
+                Animator ani = rayHit.collider.GetComponent<Enemigo>().getAnimator();
                 rayHit.collider.GetComponent<Enemigo>().TakeDamage(damage,player);
                 Debug.Log("El enemigo tiene de vida:" + rayHit.collider.GetComponent<Enemigo>().vida);
             }
         }
-
-        //ShakeCamera
-        //camShake.Shake(camShakeDuration, camShakeMagnitude);
-
-        //Graphics
-        //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
-        //Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
         bulletsLeft--;
         bulletsShot--;
@@ -103,6 +115,7 @@ public class GunSystem : MonoBehaviour{
     }
     private void Reload(){
         reloading = true;
+        PlayReloadClip();
         Invoke("ReloadFinished", reloadTime);
     }
     private void ReloadFinished(){
@@ -118,5 +131,25 @@ public class GunSystem : MonoBehaviour{
     private void StopAim(){
         mainCamera.SetActive(true);
         aimCamera.SetActive(false);
+    }
+
+    public void PLayShootingClip(){
+        if (ShootingClip != null){
+            Debug.Log("al shooting audio si es distinto de null");
+            audioSource.PlayOneShot(ShootingClip, Volume);
+            Debug.Log("Se ejecuta bien el metodo PlayOneShoot");
+        }
+    }
+
+    public void PlayOutOfAmmoClip(){
+        if (EmptyClip != null){
+            audioSource.PlayOneShot(EmptyClip, Volume);
+        }
+    }
+
+    public void PlayReloadClip(){
+        if (ReloadClip != null){
+            audioSource.PlayOneShot(ReloadClip, Volume);
+        }
     }
 }

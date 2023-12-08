@@ -21,6 +21,11 @@ public class PlayerMove : MonoBehaviour{
     }
 
     void Update(){
+        if(this.vida <= 0){
+            //aqui ponemos lo que se necesite cuando el jugador muere
+            Debug.Log("Estas muerto");
+        }
+
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
