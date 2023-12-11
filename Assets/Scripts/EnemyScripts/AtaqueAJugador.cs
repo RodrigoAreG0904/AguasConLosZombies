@@ -9,8 +9,8 @@ public class AtaqueAJugador : MonoBehaviour{
 
     void OnTriggerEnter(Collider collision) {
        if (collision.gameObject.tag == "Player"){
-            Debug.Log("Te pegó el zombie miilitar, te queda:"+ collision.gameObject.GetComponent<PlayerMove>().getVida());
             MakeDamage(collision.gameObject);
+            Debug.Log("Te pegó el zombie miilitar, te queda:"+ collision.gameObject.GetComponent<PlayerMove>().getVida());
        }
     }
 

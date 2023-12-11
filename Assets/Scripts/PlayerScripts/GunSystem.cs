@@ -42,6 +42,7 @@ public class GunSystem : MonoBehaviour{
     public int manager;
 
     private AudioSource audioSource;
+    private bool inventarioActivo;
 
     private void Awake(){
         player = GameObject.FindGameObjectWithTag("Player");
@@ -50,13 +51,20 @@ public class GunSystem : MonoBehaviour{
         audioSource = GetComponent<AudioSource>();
     }
     private void Update(){
-        MyInput();
+        if (Input.GetKeyDown(KeyCode.I)){ 
+            inventarioActivo = !inventarioActivo;
+        }
+
+        if(!inventarioActivo){
+            GunInput();
+        }
 
         //SetText
         pointsText.SetText("Score:" + player.GetComponent<PlayerMove>().getPuntos().ToString());
         magazineText.SetText(bulletsLeft + " / " + magazineSize);
     }
-    private void MyInput(){
+    private void GunInput(){
+        
         if (allowButtonHold){
             shooting = Input.GetKey(KeyCode.Mouse0);
         }
@@ -79,6 +87,7 @@ public class GunSystem : MonoBehaviour{
             PlayOutOfAmmoClip();
         }
     }
+
     private void Shoot(){
         readyToShoot = false;
 
@@ -93,12 +102,12 @@ public class GunSystem : MonoBehaviour{
 
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy)){
-            Debug.Log("Le diste al:" + rayHit.collider.name);
+            //Debug.Log("Le diste al:" + rayHit.collider.name);
 
             if (rayHit.collider.CompareTag("Enemy")){
                 Animator ani = rayHit.collider.GetComponent<Enemigo>().getAnimator();
                 rayHit.collider.GetComponent<Enemigo>().TakeDamage(damage,player);
-                Debug.Log("El enemigo tiene de vida:" + rayHit.collider.GetComponent<Enemigo>().vida);
+                //Debug.Log("El enemigo tiene de vida:" + rayHit.collider.GetComponent<Enemigo>().vida);
             }
         }
 
@@ -135,9 +144,7 @@ public class GunSystem : MonoBehaviour{
 
     public void PLayShootingClip(){
         if (ShootingClip != null){
-            Debug.Log("al shooting audio si es distinto de null");
             audioSource.PlayOneShot(ShootingClip, Volume);
-            Debug.Log("Se ejecuta bien el metodo PlayOneShoot");
         }
     }
 

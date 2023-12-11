@@ -1,6 +1,7 @@
+using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour{
@@ -20,9 +21,15 @@ public class PlayerMove : MonoBehaviour{
     public int vida;
     public int puntos;
 
+    [Header("Inventario")]
+    public GameObject inventarioUI;
+    public GameObject inventoryManager;
+    private bool inventarioActivo;
+
     void Start(){
-        vida = 100;
-        puntos = 0;
+        //El sistema de guardado ya carga estos datos
+        //vida = 100;
+        //puntos = 0;
     }
 
     void Update(){
@@ -40,9 +47,7 @@ public class PlayerMove : MonoBehaviour{
         animator.SetFloat("VelX", x);
         animator.SetFloat("VelY", y);
 
-
-        barraDeVida.fillAmount = (float)vida / (float)vidaMax;
-        
+        InventoryInput();
     }
 
     public int getVida(){
@@ -51,6 +56,9 @@ public class PlayerMove : MonoBehaviour{
 
     public void setVida(int vida){
         this.vida = vida;
+        //cambiamos tambien la barra con la nueva vida
+        barraDeVida.fillAmount = (float)vida / (float)vidaMax;
+        
     }
 
     public int getPuntos(){
@@ -59,5 +67,21 @@ public class PlayerMove : MonoBehaviour{
 
     public void setPuntos(int puntos){
         this.puntos = puntos;
+    }
+
+    private void InventoryInput(){
+        if (Input.GetKeyDown(KeyCode.I)){ 
+            AbrirCerrarInventario();
+            inventarioActivo = !inventarioActivo;
+        }
+    }
+
+     void AbrirCerrarInventario(){
+        if(inventarioActivo){
+            inventarioUI.SetActive(false);
+        }else{
+            inventoryManager.gameObject.GetComponent<InventoryManager>().ListItems();
+            inventarioUI.SetActive(true);
+        }
     }
 }

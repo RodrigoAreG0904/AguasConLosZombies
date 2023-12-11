@@ -29,8 +29,8 @@ public class controladorGuardado : MonoBehaviour{
             string contenido = File.ReadAllText(archivoGuardado);
             dg = JsonUtility.FromJson<DatoGuardado>(contenido);
             player.transform.position = dg.posicion;
-            player.GetComponent<PlayerMove>().vida = dg.vida;
-            player.GetComponent<PlayerMove>().puntos = dg.puntos;
+            player.GetComponent<PlayerMove>().setVida(dg.vida);
+            player.GetComponent<PlayerMove>().setPuntos(dg.puntos);
         }
     }
 
