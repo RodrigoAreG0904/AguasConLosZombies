@@ -725,6 +725,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1001 &154665848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2462,6 +2464,37 @@ Transform:
   - {fileID: 1342843655}
   m_Father: {fileID: 1080651560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &461812181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461812182}
+  m_Layer: 0
+  m_Name: Spawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461812182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461812181}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 0.5, z: -4.72}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1316318299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &489019583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,6 +2792,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &544083145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3206,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &688768805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,8 +3402,10 @@ MonoBehaviour:
   rotationSpeed: 150
   animator: {fileID: 698719836}
   vidaMax: 100
-  vida: 100
+  vida: 0
   puntos: 0
+  inventarioUI: {fileID: 0}
+  inventoryManager: {fileID: 0}
 --- !u!136 &698719834
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3840,6 +3879,37 @@ Transform:
   - {fileID: 689908863}
   m_Father: {fileID: 698719837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &846049893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846049894}
+  m_Layer: 0
+  m_Name: Spawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &846049894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846049893}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.48, y: 0.5, z: 1.54}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1316318299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &863783667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3971,6 +4041,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &903771927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,6 +4127,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1001 &945707453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4325,6 +4399,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8144080604075172413, guid: edd50505dc2f23f418de7d565d951d00, type: 3}
   m_PrefabInstance: {fileID: 953653408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &966622039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966622040}
+  m_Layer: 6
+  m_Name: Spawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966622040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966622039}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.4, y: 0.5, z: 2.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1316318299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &968513929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4399,7 +4504,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1549014978153237267, guid: 5683c46d34d83e44ca4b4c17c219a189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 966622040}
+    - targetCorrespondingSourceObject: {fileID: 1549014978153237267, guid: 5683c46d34d83e44ca4b4c17c219a189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 846049894}
+    - targetCorrespondingSourceObject: {fileID: 1549014978153237267, guid: 5683c46d34d83e44ca4b4c17c219a189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 461812182}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2176615513489478057, guid: 5683c46d34d83e44ca4b4c17c219a189, type: 3}
       insertIndex: -1
@@ -5045,19 +5159,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rutina: 0
   cronometro: 0
-  ani: {fileID: 0}
+  ani: {fileID: 1080651559}
   angulo: {x: 0, y: 0, z: 0, w: 0}
   grado: 0
   barraDeVida: {fileID: 1609745566}
   vidaMax: 100
+  target: {fileID: 698719832}
+  atacando: 0
+  siendoAtacado: 0
+  rojo: {fileID: 2100000, guid: 3101cbb8b9ccd2248a944dceabb8260a, type: 2}
+  negro: {fileID: 2100000, guid: e3ff4f9a07e112040a9ba312394b33c7, type: 2}
   vida: 100
   puntos: 5
+  ataque: 0
   velocidadCaminar: 1
   velocidadCorrer: 4
   radioVista: 10
   radioAtaque: 3
-  target: {fileID: 698719832}
-  atacando: 0
+  handHitbox: {fileID: 0}
 --- !u!136 &1080651557
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5990,6 +6109,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &1283767803
 GameObject:
   m_ObjectHideFlags: 0
@@ -6319,6 +6440,19 @@ MonoBehaviour:
   - {fileID: 625242516236402489, guid: 43d697a26e4cf694fa1de5435575341d, type: 3}
   - {fileID: 2107728081518688553, guid: aa7d1f96c0431314a878a2d84cd51729, type: 3}
   - {fileID: 6370764775388150225, guid: ea99e1f78d567fd43a874e5fceb5fcc2, type: 3}
+  Spawn:
+  - {fileID: 966622039}
+  - {fileID: 846049893}
+  - {fileID: 461812181}
+  Enemigo:
+  - {fileID: 1080651555}
+  - {fileID: 1080651555}
+  - {fileID: 1080651555}
+--- !u!4 &1316318299 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1549014978153237267, guid: 5683c46d34d83e44ca4b4c17c219a189, type: 3}
+  m_PrefabInstance: {fileID: 968513929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1320955992
 GameObject:
   m_ObjectHideFlags: 0
@@ -6413,6 +6547,10 @@ MonoBehaviour:
     m_Bits: 1
   magazineText: {fileID: 413493135}
   pointsText: {fileID: 1863684856}
+  Volume: 1
+  ShootingClip: {fileID: 0}
+  EmptyClip: {fileID: 0}
+  ReloadClip: {fileID: 0}
   mainCamera: {fileID: 489019583}
   aimCamera: {fileID: 1079352319}
   manager: 0
@@ -6500,6 +6638,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1001 &1436745157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6823,6 +6963,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1001 &1535704989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7499,6 +7641,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &1683693039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7752,6 +7896,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &1774124759
 GameObject:
   m_ObjectHideFlags: 0
@@ -8406,6 +8552,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &1937486662
 GameObject:
   m_ObjectHideFlags: 0
@@ -9017,6 +9165,8 @@ MonoBehaviour:
   cantRec: 0
   pos: {fileID: 0}
   Recursos: []
+  Spawn: []
+  Enemigo: []
 --- !u!1 &2066618515
 GameObject:
   m_ObjectHideFlags: 0
@@ -9613,7 +9763,6 @@ SceneRoots:
   - {fileID: 688768808}
   - {fileID: 2140047375}
   - {fileID: 428515977}
-  - {fileID: 968513929}
   - {fileID: 1745732093}
   - {fileID: 302671079}
   - {fileID: 1624843151}
@@ -9637,3 +9786,4 @@ SceneRoots:
   - {fileID: 1005036996}
   - {fileID: 1238211738}
   - {fileID: 1039672383}
+  - {fileID: 968513929}
