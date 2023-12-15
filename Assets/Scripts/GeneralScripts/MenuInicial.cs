@@ -5,16 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour{
 
-    public GameObject playButton;
-    public GameObject confButton;
+    //public GameObject playButton;
+    //public GameObject confButton;
+    public GameObject menuScreen;
     public GameObject confScreen;
+
+    public GameObject instrScreen;
 
     public void Jugar(){
         SceneManager.LoadScene(2);
     }
 
-    public void Tutorial(){
-        SceneManager.LoadScene(1);
+    public void Instruction(){
+        //playButton.SetActive(false);
+        //confButton.SetActive(false);
+        confScreen.SetActive(false);
+        instrScreen.SetActive(true);
     }
 
     public void Salir(){
@@ -23,8 +29,12 @@ public class MenuInicial : MonoBehaviour{
     }
 
     public void Config(){
-        playButton.SetActive(false);
-        confButton.SetActive(false);
+        menuScreen.SetActive(false);
         confScreen.SetActive(true);
+    }
+
+    public void Return(){
+        confScreen.SetActive(true);
+        instrScreen.SetActive(false);
     }
 }
