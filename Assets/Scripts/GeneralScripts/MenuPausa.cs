@@ -7,6 +7,8 @@ public class MenuPausa : MonoBehaviour
 
     public GameObject camara;
     public GameObject player;
+
+    [Header("Pantallas")]
     public GameObject pauseScreen;
     public GameObject menuScreen;
     public GameObject confirmScreen;

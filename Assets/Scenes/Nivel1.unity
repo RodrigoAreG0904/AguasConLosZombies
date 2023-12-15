@@ -3456,6 +3456,7 @@ MonoBehaviour:
   puntos: 0
   inventarioUI: {fileID: 0}
   inventoryManager: {fileID: 0}
+  gameOverScreen: {fileID: 401269435}
 --- !u!136 &698719834
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6498,7 +6499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087691697}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGameOver, Assembly-CSharp
         m_MethodName: Salir
         m_Mode: 1
@@ -7095,7 +7096,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087691697}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGameOver, Assembly-CSharp
         m_MethodName: TryAgain
         m_Mode: 1
@@ -7911,7 +7912,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087691697}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGameOver, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
@@ -9502,7 +9503,6 @@ GameObject:
   - component: {fileID: 2087691693}
   - component: {fileID: 2087691692}
   - component: {fileID: 2087691696}
-  - component: {fileID: 2087691697}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9614,19 +9614,6 @@ MonoBehaviour:
   menuScreen: {fileID: 4399298683766745397}
   confirmScreen: {fileID: 1668190617}
   onPause: 0
---- !u!114 &2087691697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087691691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dad0b3c0f313664da972c0db8b181a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuGameOver: {fileID: 401269435}
 --- !u!1 &2097543135
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,18 +6,6 @@ using UnityEngine.SceneManagement;
 public class MenuGameOver : MonoBehaviour
 {
 
-    public GameObject menuGameOver;
-
-    private void Update(){
-        if(Input.GetKeyDown(KeyCode.M)){
-            GameOver();
-        }
-    }
-
-    public void GameOver(){
-        menuGameOver.SetActive(true);
-    }
-
     public void TryAgain(){
         
     }

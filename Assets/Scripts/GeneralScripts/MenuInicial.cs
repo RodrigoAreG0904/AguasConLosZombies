@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour{
 
-    //public GameObject playButton;
-    //public GameObject confButton;
+    [Header("Pantallas")]
     public GameObject menuScreen;
     public GameObject confScreen;
 
