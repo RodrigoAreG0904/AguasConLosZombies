@@ -48,6 +48,11 @@ public class ItemController : MonoBehaviour
 
             case Item.ItemType.Tarjeta:
                 //No puede hacer nada, solo llevarla a la atalaya
+                int puntos = PlayerMove.Instance.getPuntos();
+                puntos = puntos + item.value;
+                PlayerMove.Instance.setPuntos(puntos);
+                InventoryManager.Instance.Remove(item);
+                RemoveItem();
                 break;
         }
     }

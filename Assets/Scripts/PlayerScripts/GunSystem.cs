@@ -51,6 +51,8 @@ public class GunSystem : MonoBehaviour{
         audioSource = GetComponent<AudioSource>();
     }
     private void Update(){
+        inventarioActivo = PlayerMove.Instance.GetInventarioActivo();
+
         if (Input.GetKeyDown(KeyCode.I)){ 
             inventarioActivo = !inventarioActivo;
         }

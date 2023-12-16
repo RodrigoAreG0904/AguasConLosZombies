@@ -191,8 +191,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.59, y: 0.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7463415674889614063}
   - {fileID: 1815051691494277695}
@@ -298,10 +298,10 @@ MonoBehaviour:
   vida: 75
   puntos: 25
   ataque: 10
-  velocidadCaminar: 5
-  velocidadCorrer: 15
-  radioVista: 60
-  radioAtaque: 5
+  velocidadCaminar: 2
+  velocidadCorrer: 4
+  radioVista: 30
+  radioAtaque: 1
   handHitbox: {fileID: 5393664143609867838}
 --- !u!1 &997359384156211154
 GameObject:

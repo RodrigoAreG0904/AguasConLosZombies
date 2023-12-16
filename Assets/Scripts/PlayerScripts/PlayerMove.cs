@@ -94,4 +94,8 @@ public class PlayerMove : MonoBehaviour{
             InventoryManager.Instance.SetInventoryItems();
         }
     }
+
+    public bool GetInventarioActivo(){
+        return inventarioActivo;
+    }
 }
