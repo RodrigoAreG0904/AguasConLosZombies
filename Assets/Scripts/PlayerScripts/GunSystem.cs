@@ -77,6 +77,7 @@ public class GunSystem : MonoBehaviour{
         if (Input.GetKey(KeyCode.Mouse1)) Aim();
         if (Input.GetKeyUp(KeyCode.Mouse1)) StopAim();
 
+        //Ya no recarga debido a que no completamos la utilidad de las municiones
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
 
         //Shoot
