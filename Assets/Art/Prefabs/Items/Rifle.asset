@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f656e20212439dd46850864d47fb197f, type: 3}
-  m_Name: HealthKit
+  m_Name: Rifle
   m_EditorClassIdentifier: 
-  id: 3
-  itemName: Health Kit
-  value: 50
-  icon: {fileID: 21300000, guid: a34b1715a56bd5246b0c09a2b113679b, type: 3}
-  type: 0
+  id: 7
+  itemName: rifle
+  value: 1
+  icon: {fileID: 21300000, guid: 1a99397143e07a84a8a3fffe2cb7f3d3, type: 3}
+  itemType: 1

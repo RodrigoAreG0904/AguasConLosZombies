@@ -33,8 +33,8 @@ public class Enemigo : MonoBehaviour{
     public GameObject handHitbox;
 
     void Start(){
-        vida = 100;
-        puntos = 5;
+        //vida = 100;
+        //puntos = 5;
         ani = GetComponent<Animator>();
         target = GameObject.Find("Player");
         if (transform.Find("Zombie") != null){
@@ -122,9 +122,13 @@ public class Enemigo : MonoBehaviour{
         vida = vida - damage;
         siendoAtacado = true;
         barraDeVida.fillAmount = (float)vida/(float)vidaMax;
-        int puntosJugador = player.GetComponent<PlayerMove>().getPuntos();
-        puntosJugador = puntosJugador + this.puntos;
-        player.GetComponent<PlayerMove>().setPuntos(puntosJugador);
+        if(vida <= 0){
+            int puntosJugador = player.GetComponent<PlayerMove>().getPuntos();
+            puntosJugador = puntosJugador + this.puntos;
+            player.GetComponent<PlayerMove>().setPuntos(puntosJugador);
+            //por si le da al zombie ya muerto
+            this.puntos = 0;
+        }
     }
 
     // Método que se llamará después del retraso

@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f656e20212439dd46850864d47fb197f, type: 3}
-  m_Name: Bendas
+  m_Name: Revolver
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: Bendas
-  value: 10
-  icon: {fileID: 21300000, guid: fce3d482490e40345bf3ff80dee9a1df, type: 3}
+  id: 5
+  itemName: pistol
+  value: 1
+  icon: {fileID: 21300000, guid: 9fb209452cd29e34baad1bb3f7dc4b27, type: 3}
+  itemType: 1

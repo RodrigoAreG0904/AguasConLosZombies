@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour{
 
+    public static PlayerMove Instance;
+
     public Image barraDeVida;
 
     public float runSpeed = 7;
@@ -26,10 +28,11 @@ public class PlayerMove : MonoBehaviour{
     public GameObject inventoryManager;
     private bool inventarioActivo;
 
-    void Start(){
+    void Awake(){
         //El sistema de guardado ya carga estos datos
         //vida = 100;
         //puntos = 0;
+        Instance = this;
     }
 
     void Update(){
@@ -78,10 +81,12 @@ public class PlayerMove : MonoBehaviour{
 
      void AbrirCerrarInventario(){
         if(inventarioActivo){
+            InventoryManager.Instance.RemoveInventoryItems();
             inventarioUI.SetActive(false);
         }else{
-            inventoryManager.gameObject.GetComponent<InventoryManager>().ListItems();
+            InventoryManager.Instance.ListItems();
             inventarioUI.SetActive(true);
+            InventoryManager.Instance.SetInventoryItems();
         }
     }
 }
