@@ -28,6 +28,10 @@ public class PlayerMove : MonoBehaviour{
     public GameObject inventoryManager;
     private bool inventarioActivo;
 
+    [Header("GameOver")]
+
+    public GameObject gameOverScreen;
+
     void Awake(){
         //El sistema de guardado ya carga estos datos
         //vida = 100;
@@ -38,6 +42,7 @@ public class PlayerMove : MonoBehaviour{
     void Update(){
         if(this.vida <= 0){
             //aqui ponemos lo que se necesite cuando el jugador muere
+            gameOverScreen.SetActive(true);
             Debug.Log("Estas muerto");
         }
 

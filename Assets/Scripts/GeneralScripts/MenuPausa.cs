@@ -5,10 +5,13 @@ using UnityEngine;
 public class MenuPausa : MonoBehaviour
 {
 
-    public GameObject continueButton;
-    public GameObject exitButton;
+    public GameObject camara;
+    public GameObject player;
+
+    [Header("Pantallas")]
     public GameObject pauseScreen;
-    public GameObject hitImage;
+    public GameObject menuScreen;
+    public GameObject confirmScreen;
 
     public bool onPause = false;
 
@@ -24,20 +27,23 @@ public class MenuPausa : MonoBehaviour
 
     public void Continue(){
         Time.timeScale = 1f;
-        continueButton.SetActive(false);
-        exitButton.SetActive(false);
+        camara.SetActive(false);
+        player.SetActive(true);
         pauseScreen.SetActive(false);
-        hitImage.SetActive(true);
         onPause = !onPause;
     }
 
     public void Pause(){
         Time.timeScale = 0f;
-        continueButton.SetActive(true);
-        exitButton.SetActive(true);
+        camara.SetActive(true);
+        player.SetActive(false);
         pauseScreen.SetActive(true);
-        hitImage.SetActive(false);
         onPause = !onPause;
+    }
+
+    public void MenuConfirm(){
+        confirmScreen.SetActive(true);
+        menuScreen.SetActive(false);
     }
 
     public void Salir(){
