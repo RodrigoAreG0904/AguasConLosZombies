@@ -1722,6 +1722,8 @@ MonoBehaviour:
   inventarioUI: {fileID: 1320013459061531278}
   inventoryManager: {fileID: 9007954699288455245}
   gameOverScreen: {fileID: 0}
+  camara: {fileID: 0}
+  player: {fileID: 4581130530719753223}
 --- !u!114 &4148540407460540948
 MonoBehaviour:
   m_ObjectHideFlags: 0

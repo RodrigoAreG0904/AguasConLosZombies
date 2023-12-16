@@ -31,6 +31,8 @@ public class PlayerMove : MonoBehaviour{
     [Header("GameOver")]
 
     public GameObject gameOverScreen;
+    public GameObject camara;
+    public GameObject player;
 
     void Awake(){
         //El sistema de guardado ya carga estos datos
@@ -43,7 +45,8 @@ public class PlayerMove : MonoBehaviour{
         if(this.vida <= 0){
             //aqui ponemos lo que se necesite cuando el jugador muere
             gameOverScreen.SetActive(true);
-            Debug.Log("Estas muerto");
+            camara.SetActive(true);
+            player.SetActive(false);
         }
 
         x = Input.GetAxis("Horizontal");
